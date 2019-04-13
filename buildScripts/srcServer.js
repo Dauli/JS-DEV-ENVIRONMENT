@@ -18,6 +18,16 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../src/index.html'))
 });
 
+// get data from an API
+app.get('/users', function(req, res) {
+  // Hard coded for simplicity. Pretend this is a real database
+  res.json([
+    {"id":1, "name":"Bob", "lastName":"Smith", "email":"bob@gmail.com"},
+    {"id":2, "name":"Tommy", "lastName":"Norton", "email":"tnorton@gmail.com"},
+    {"id":3, "name":"Tina", "lastName":"Lee", "email":"lee.tina@gmail.com"}
+  ]);
+});
+
 app.listen(port, function(err) {
   if(err) {
     console.log(err); //eslint-disable-line no-console

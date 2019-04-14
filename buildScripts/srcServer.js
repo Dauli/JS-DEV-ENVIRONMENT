@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../src/index.html'))
 });
 
-// get data from an API
+// get data from an API, endpoint that returns user's data
 app.get('/users', function(req, res) {
   // Hard coded for simplicity. Pretend this is a real database
   res.json([

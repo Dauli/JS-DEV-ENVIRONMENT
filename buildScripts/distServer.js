@@ -11,7 +11,7 @@ app.use(express.static('dist'));
 
 // handle anything to the root '/'
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../src/index.html'))
+  res.sendFile(path.join(__dirname, '../dist/index.html'))
 });
 
 // get data from an API, endpoint that returns user's data
